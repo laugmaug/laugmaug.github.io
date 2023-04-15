@@ -8,7 +8,7 @@
           var xhr = new XMLHttpRequest();
           const urlParams = new URLSearchParams(window.location.href);
         
-        console.log(urlParams.keys());
+        console.log(URLSearchParams.get("i"));
 
         if(urlParams.keys().includes("type") && urlParams.keys().includes("content")){
             xhr.onreadystatechange = function() {
