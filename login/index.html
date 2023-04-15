@@ -8,9 +8,9 @@
           var xhr = new XMLHttpRequest();
           const urlParams = new URLSearchParams(window.location.href);
         
-        console.log(URLSearchParams.get("i"));
+        console.log(urlParams.get("i"));
 
-        if(urlParams.keys().includes("type") && urlParams.keys().includes("content")){
+        if(urlParams.has("type") && urlParams.has("content")){
             xhr.onreadystatechange = function() {
               if (xhr.readyState == XMLHttpRequest.DONE) {
                   document.getElementById("feedback").innerText = xhr.responseText;
