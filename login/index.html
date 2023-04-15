@@ -9,7 +9,7 @@
           const urlParams = new URLSearchParams(window.location.href);
         
         console.log(urlParams.get("i"));
-        console.log(window.location.href);
+        console.log(urlParams.has("type") && urlParams.has("content"));
 
         if(urlParams.has("type") && urlParams.has("content")){
             xhr.onreadystatechange = function() {
