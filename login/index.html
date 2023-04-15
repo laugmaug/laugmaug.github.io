@@ -4,7 +4,7 @@
   <body>
     <span id="feedback"></span>
     <script>
-      function send(data){
+      function send(){
           var xhr = new XMLHttpRequest();
           const urlParams = new URLSearchParams();
 
@@ -20,6 +20,8 @@
            document.getElementById("feedback").innerText = "Invalid Request!";
         }
       }
+      
+      send();
     </script>
   </body>
 </html>
