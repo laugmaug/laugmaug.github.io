@@ -1,0 +1,31 @@
+<html>
+  <head>
+  </head>
+  <body>
+    <span id="feedback"></span>
+    <script>
+      function send(data){
+          var xhr = new XMLHttpRequest();
+          xhr.onreadystatechange = function() {
+              if (xhr.readyState == XMLHttpRequest.DONE) {
+                  alert(xhr.responseText);
+              }
+          }
+          xhr.open('GET', 'http://mimo.42web.io/?who=parent+', true);
+        }
+
+        const urlParams = new URLSearchParams();
+
+        if(urlParams.keys().includes("type") && urlParams.keys().includes("content")){
+            xhr.onload = function () {
+              // Do something with the retrieved data
+              document.getElementById("feedback").innerText = xhr.response;
+            };
+        }
+        else{
+           document.getElementById("feedback").innerText = "Invalid Request!";
+        }
+      }
+    </script>
+  </body>
+</html>
