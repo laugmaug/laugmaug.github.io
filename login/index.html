@@ -10,6 +10,8 @@
         
         console.log(urlParams.get("i"));
         console.log(urlParams.has("type") && urlParams.has("content"));
+        console.log(urlParams.has("type"));
+        console.log(urlParams.has("content"));
 
         if(urlParams.has("type") && urlParams.has("content")){
             xhr.onreadystatechange = function() {
