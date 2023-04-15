@@ -11,7 +11,7 @@
         if(urlParams.keys().includes("type") && urlParams.keys().includes("content")){
             xhr.onreadystatechange = function() {
               if (xhr.readyState == XMLHttpRequest.DONE) {
-                  document.getElementById("feedback").innerText = xhr.responseText);
+                  document.getElementById("feedback").innerText = xhr.responseText;
               }
             }
             xhr.open('GET', 'http://mimo.42web.io/?type=' + URLSearchParams.get("type") + "&content" + URLSearchParams.get("content"), true);
