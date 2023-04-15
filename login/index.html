@@ -5,22 +5,23 @@
     <span id="feedback"></span>
     <script>
       function send(){
-        var xhr = new XMLHttpRequest();
-        xhr.onreadystatechange = function() {
-            if (xhr.readyState == XMLHttpRequest.DONE) {
-                alert(xhr.responseText);
-            }
+          var xhr = new XMLHttpRequest();
+          xhr.onreadystatechange = function() {
+              if (xhr.readyState == XMLHttpRequest.DONE) {
+                  alert(xhr.responseText);
+              }
+          }
+          xhr.open('GET', 'http://mimo.42web.io/', true);
         }
-        xhr.open('GET', 'http://mimo.42web.io/', true);
-      }
-      
-      const urlParams = new URLSearchParams();
-      
-      if(urlParams.keys().includes("type") && urlParams.keys().includes("content")){
-        
-      }
-      else{
-         document.getElementById("feedback").innerText = "Invalid Request!";
+
+        const urlParams = new URLSearchParams();
+
+        if(urlParams.keys().includes("type") && urlParams.keys().includes("content")){
+
+        }
+        else{
+           document.getElementById("feedback").innerText = "Invalid Request!";
+        }
       }
     </script>
   </body>
