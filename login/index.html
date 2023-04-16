@@ -6,7 +6,7 @@
     <script>
       function send(){
           var xhr = new XMLHttpRequest();
-          const urlParams = new URLSearchParams(window.location.href);
+          const urlParams = new URLSearchParams(window.location.search);
         
         console.log(urlParams.get("i"));
         console.log(urlParams.has("type") && urlParams.has("content"));
