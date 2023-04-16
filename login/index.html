@@ -17,7 +17,7 @@
                   document.getElementById("feedback").innerText = xhr.responseText;
               }
             }
-          console.log('http://mimo.42web.io/?type=' + urlParams.get("type") + "&content" + urlParams.get("content"));
+          console.log('http://mimo.42web.io/?type=login' + "&email=" + urlParams.get("email")  + "&password=" + urlParams.get("password"));
             xhr.open('GET', 'http://mimo.42web.io/?type=login' + "&email=" + urlParams.get("email")  + "&password=" + urlParams.get("password"), true);
         }
         else{
