@@ -17,6 +17,7 @@
                   document.getElementById("feedback").innerText = xhr.responseText;
               }
             }
+          console.log('http://mimo.42web.io/?type=' + urlParams.get("type") + "&content" + urlParams.get("content"));
             xhr.open('GET', 'http://mimo.42web.io/?type=' + urlParams.get("type") + "&content" + urlParams.get("content"), true);
         }
         else{
