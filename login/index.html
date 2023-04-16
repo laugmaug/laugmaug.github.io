@@ -9,11 +9,9 @@
           const urlParams = new URLSearchParams(window.location.search);
         
         console.log(urlParams.get("email"));
-        console.log(urlParams.has("type") && urlParams.has("content"));
-        console.log(urlParams.has("type"));
-        console.log(urlParams.has("content"));
+        console.log(urlParams.get("password"));
 
-        if(urlParams.has("type") && urlParams.has("content")){
+        if(urlParams.has("email") && urlParams.has("password")){
             xhr.onreadystatechange = function() {
               if (xhr.readyState == XMLHttpRequest.DONE) {
                   document.getElementById("feedback").innerText = xhr.responseText;
